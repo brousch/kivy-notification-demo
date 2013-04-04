@@ -1,0 +1,11 @@
+build-essential
+git
+python2.7
+python2.7-dev
+python-virtualenv
+python-pygame
+python-opengl
+python-gst0.10
+gstreamer0.10-plugins-good
+libgl1-mesa-dev
+libgles2-mesa-dev

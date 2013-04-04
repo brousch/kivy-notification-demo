@@ -1,0 +1,1 @@
+-e git+git://github.com/kivy/kivy.git@master#egg=Kivy

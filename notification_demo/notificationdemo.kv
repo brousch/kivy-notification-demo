@@ -1,0 +1,24 @@
+#:kivy 1.6.0
+<NotificationDemo>:
+    orientation: 'vertical'
+    notification_title: notification_title
+    notification_text: notification_text
+    notifications_received: notifications_received
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, None
+        TextInput:
+            id: notification_title
+            text: 'Put title here'
+            size_hint: 1, None
+        TextInput:
+            id: notification_text
+            text: 'Put message here'
+            size_hint: 1, None
+    Button:
+        text: 'Send Notification'
+        size_hint: 1, None
+        on_press: root.notify(notification_title.text, notification_text.text)
+    Label:
+        id: notifications_received
+        text: ''
