@@ -40,9 +40,9 @@ class NotificationAndroid(NotificationBase):
 class NotificationLinux(NotificationBase):
     def notify(self):
         ''' Displays a notification via libnotify '''
-        import pynotify
-        pynotify.init (self.title)
-        noti = pynotify.Notification (self.title,
+        import notify2
+        notify2.init (self.title)
+        noti = notify2.Notification (self.title,
                                       self.message,
                                       "dialog-information")
         noti.show ()

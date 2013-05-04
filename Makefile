@@ -37,7 +37,7 @@ run:
 .PHONY: inspect
 inspect:
 	cd $(PROJECT_DIR); \
-	python main.py -m inspect
+	$(PY) main.py -m inspector
 
 
 # Setup
@@ -54,7 +54,7 @@ create_virtualenv:
 	virtualenv -p python2.7 --system-site-packages $(VENV)
 
 .PHONY: initialize_virtualenv
-initialize_virtualenv: install_cython install_kivy_dev
+initialize_virtualenv: install_cython install_kivy_dev install_linux
 
 .PHONY: install_cython
 install_cython:
@@ -63,6 +63,10 @@ install_cython:
 .PHONY: install_kivy_dev
 install_kivy_dev:
 	$(PIP) install -U -r requirements-kivy-dev.txt
+
+.PHONY: install_linux
+install_linux:
+	$(PIP) install -U -r requirements-linux.txt
 
 .PHONY: install_python_for_android
 install_python_for_android:
